@@ -48,13 +48,17 @@ $ sudo wget http://www.tik.ee.ethz.ch/~shapes/downloads/dol_ethz.zip
  - 编译
 
  	` $ sudo make install `
-编译完后文件目录如下(`$ cd ..`        `$ ls`)
-![](https://github.com/nickxiaowei/markdownpicture/raw/master/lab1_picture2.jpg)
+
+   	编译完后文件目录如下(`$ cd ..`        `$ ls`)
+   	![](https://github.com/nickxiaowei/markdownpicture/raw/master/lab1_picture2.jpg)
+
  - 记录当前的工作路径(会输出当前所在路径，记下来，待会有用)
 
  	` $ pwd `
-![](https://github.com/nickxiaowei/markdownpicture/raw/master/lab1_picture3.png)
-这里表示我当前的工作路径为/home/liuxiaowei/systemc-2.3.1
+
+   	![](https://github.com/nickxiaowei/markdownpicture/raw/master/lab1_picture3.png)
+
+   	这里表示我当前的工作路径为/home/liuxiaowei/systemc-2.3.1
 
 * 编译dol
  - 进入刚刚dol的文件夹
@@ -63,10 +67,10 @@ $ sudo wget http://www.tik.ee.ethz.ch/~shapes/downloads/dol_ethz.zip
  - 修改build_zip.xml文件
    找到下面这段话，就是说上面编译的systemc位置在哪里
 
-   > property name="systemc.inc" value="YYY/include"/
-   > property name="systemc.lib" value="YYY/lib-linux/libsystemc.a"/
+   	> property name="systemc.inc" value="YYY/include"/
+   	> property name="systemc.lib" value="YYY/lib-linux/libsystemc.a"/
 
-   把YYY改成上页pwd的结果（注意，对于  64位 系统的机器，lib-linux要改成lib-linux64）
+   	把YYY改成上页pwd的结果（注意，对于  64位 系统的机器，lib-linux要改成lib-linux64）
  - 然后是编译
  
    ` $ ant -f build_zip.xml all `
