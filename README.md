@@ -72,13 +72,16 @@ $ sudo wget http://www.tik.ee.ethz.ch/~shapes/downloads/dol_ethz.zip
    找到下面这段话，就是说上面编译的systemc位置在哪里
 
    	> property name="systemc.inc" value="YYY/include"/
+
    	> property name="systemc.lib" value="YYY/lib-linux/libsystemc.a"/
 
    	把YYY改成上页pwd的结果（注意，**对于64位系统的机器，lib-linux要改成lib-linux64**）
+
  - 然后是编译
  
    ` $ ant -f build_zip.xml all `
-若成功会显示**build successful**
+
+   	若成功会显示**build successful**
  - 然后试着运行第一个例子
    
    ``` 
