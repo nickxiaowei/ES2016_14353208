@@ -2,23 +2,24 @@
 
 ### Description ###
 
- The distributed operation layer (DOL) is a software development framework to program parallel applications. The DOL allows to specify applications based on the Kahn process network model of computation and features a simulation engine based on SystemC. Moreover, the DOL provides an XML-based specification format to describe the implementation of a parallel application on a multi-processor systems, including binding and mapping.
+**The distributed operation layer (DOL)** is a software development framework to program parallel applications. The DOL allows to specify applications based on the Kahn process network model of computation and features a simulation engine based on SystemC. Moreover, the DOL provides an XML-based specification format to describe the implementation of a parallel application on a multi-processor systems, including binding and mapping.
 
 ### How To Install ###
 
 * 安装必要环境
-``` 
+   ``` 
 $ sudo apt-get update
 $ sudo apt-get install ant
 $ sudo apt-get install openjdk-7-jdk
 $ sudo apt-get install unzip
-```
+   ```
 
 * 下载文件
-```
+   ```
 $ sudo wget http://www.accellera.org/images/downloads/standards/systemc/systemc-2.3.1.tgz
 $ sudo wget http://www.tik.ee.ethz.ch/~shapes/downloads/dol_ethz.zip
-```
+   ```
+
 * 解压文件 
  - 新建dol的文件夹
 
@@ -43,13 +44,16 @@ $ sudo wget http://www.tik.ee.ethz.ch/~shapes/downloads/dol_ethz.zip
  - 运行configure(能根据系统的环境设置一下参数，用于编译)
 
  	` $ ../configure CXX=g++ --disable-async-updates `
-下图为运行configure之后的截图
-![](https://github.com/nickxiaowei/markdownpicture/raw/master/lab1_picture1.png)
+
+   	下图为运行configure之后的截图
+
+   	![](https://github.com/nickxiaowei/markdownpicture/raw/master/lab1_picture1.png)
  - 编译
 
  	` $ sudo make install `
 
    	编译完后文件目录如下(`$ cd ..`        `$ ls`)
+
    	![](https://github.com/nickxiaowei/markdownpicture/raw/master/lab1_picture2.jpg)
 
  - 记录当前的工作路径(会输出当前所在路径，记下来，待会有用)
@@ -58,7 +62,7 @@ $ sudo wget http://www.tik.ee.ethz.ch/~shapes/downloads/dol_ethz.zip
 
    	![](https://github.com/nickxiaowei/markdownpicture/raw/master/lab1_picture3.png)
 
-   	这里表示我当前的工作路径为/home/liuxiaowei/systemc-2.3.1
+   	这里表示我当前的工作路径为**/home/liuxiaowei/systemc-2.3.1**
 
 * 编译dol
  - 进入刚刚dol的文件夹
@@ -70,19 +74,20 @@ $ sudo wget http://www.tik.ee.ethz.ch/~shapes/downloads/dol_ethz.zip
    	> property name="systemc.inc" value="YYY/include"/
    	> property name="systemc.lib" value="YYY/lib-linux/libsystemc.a"/
 
-   	把YYY改成上页pwd的结果（注意，对于  64位 系统的机器，lib-linux要改成lib-linux64）
+   	把YYY改成上页pwd的结果（注意，**对于64位系统的机器，lib-linux要改成lib-linux64**）
  - 然后是编译
  
    ` $ ant -f build_zip.xml all `
-若成功会显示build successful
+若成功会显示**build successful**
  - 然后试着运行第一个例子
    
    ``` 
    $ cd build/bin/main
    $ ant -f runexample.xml -Dnumber=1
    ```
-成功结果如下图
-![](https://github.com/nickxiaowei/markdownpicture/raw/master/lab1_picture4.png)
+   成功结果如下图
+
+   		![](https://github.com/nickxiaowei/markdownpicture/raw/master/lab1_picture4.png)
 
 ### Experimental experience ###
 * **lab1**
